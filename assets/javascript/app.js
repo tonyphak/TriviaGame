@@ -146,6 +146,7 @@ function answerScreen() {
         //add correct friends gif using array of gif
         var img = $("<img>");
         img.attr("src","assets/images/"+gifArray[currentQuest]+".gif");
+        img.attr("alt", "Friends GIF");
         $("#gif").append(img);
 
     } else if ((playerSelect != correctAnswerIndex) && (answered == true)) {
