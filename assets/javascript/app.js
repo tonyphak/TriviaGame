@@ -116,7 +116,7 @@ var messages = { correct: "CORRECT!", wrong: "WRONG!", timeOver: "OUT OF TIME!",
 //create onclick function for start game button to start game/timer and shows list of questions and multiple answers 
 $("#startbtn").on("click", function () {
     $(this).hide();
-    $(".question").text(scoreScreen());
+    $(".question").text(newTrivia());
 })
 
 //create function for starting new game that will reset everything
