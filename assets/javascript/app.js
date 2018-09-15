@@ -10,7 +10,7 @@ var friendsQuestion = [{
     answer: 0
 }, {
     question: "Let's start off easy. Which borough of New York does the gang live in?",
-    answerOption: ["Brooklyn", "Queens", "The Bronx", "Manhantten"],
+    answerOption: ["Brooklyn", "Queens", "The Bronx", "Manhattan"],
     answer: 3
 }, {
     question: "What was the name of the 'twin' Joey hired for an identical twin study?",
