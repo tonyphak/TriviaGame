@@ -56,6 +56,11 @@ img{
     font-family: 'Permanent Marker', cursive;
     font-size: 50px;
 }
+
+#numCorrect, #numWrong, #unanswered{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+}
 #curQuestion{
     color: #E4523B;
     font-size: 30px;
