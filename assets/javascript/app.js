@@ -9,7 +9,7 @@ var friendsQuestion = [{
     answerOption: ["Emily", "Rachel", "Susan", "Carol"],
     answer: 0
 }, {
-    question: "Let's start off easy. Which borough of New York does the gang live in??",
+    question: "Let's start off easy. Which borough of New York does the gang live in?",
     answerOption: ["Brooklyn", "Queens", "The Bronx", "Manhantten"],
     answer: 3
 }, {
@@ -47,6 +47,56 @@ var friendsQuestion = [{
     answerOption: ["Sweaters", "Cake", "Jam", "Cocktails"],
     answer: 2
 
+}, {
+    question: "Who plays 'Will', an old friend of Monica and Ross' from high school who hates Rachel?",
+    answerOption: ["Bruce Willis", "Paul Rudd", "Brad Pitt", "Ben Stiller"],
+    answer: 2
+
+}, {
+    question: "How long was Ross supposed to wait in the booth before he turned to get his back sprayed?",
+    answerOption: ["2 seconds", "10 secons", "8 seconds", "5 seconds"],
+    answer: 3
+
+}, {
+    question: "What does Ross say that Rachel’s “traditional English trifle” tastes like?",
+    answerOption: ["Cake", "Feet", "Boogers", "Delicious"],
+    answer: 1
+
+}, {
+    question: "How many categories for towels does Monica have?",
+    answerOption: ["10", "7", "11", "5"],
+    answer: 2
+
+}, {
+    question: "What is Chandler’s first job?",
+    answerOption: ["Comic Writer", "Marketing", "Transponster", "IT Procurement Manager"],
+    answer: 3
+
+}, {
+    question: "In The One With The Rumour, what did Ross and Will give Rachel?",
+    answerOption: ["A Teeny Weeny", "A Weeny Peeny", "Hairy Armpits", "A Mustache"],
+    answer: 0   
+
+}, {
+    question: "What is Dr. Drake Ramoray's speciality (branch of medicine)?",
+    answerOption: ["Cardiologist", "Surgeon", "Anesthesiologist", "Neurosurgeon"],
+    answer: 3
+
+}, {
+    question: "What does Unagi mean to Ross?",
+    answerOption: ["Salmon Skin Roll", "State of Total Awareness", "Fresh Water Eel", "Danger Danger!"],
+    answer: 1
+
+}, {
+    question: "What was the name of Monica's and Ross's dance routine that they did on 'Dick Clark's New Year's Rocking Eve'?",
+    answerOption: ["The NYE Dance Routine", "The Practice", "The Robot", "The Routine"],
+    answer: 3
+
+}, {
+    question: "What did Ross make for dinner for his double date with Charlie, Rachel, and Joey",
+    answerOption: ["Sandwiches", "Fajitas", "Tacos", "Margaritas"],
+    answer: 1
+
 }];
 
 //create var for correct answer, incorrect answer, unanswer, answered, time, seconds, and player select
@@ -58,7 +108,8 @@ var answered;
 var time;
 var seconds;
 var playerSelect;
-var gifArray = ["question1", "question2", "qustion3", "question4", "question5", "question6", "question7", "question8", "question9", "question10"];
+var gifArray = ["question1", "question2", "question3", "question4", "question5", "question6", "question7", "question8", "question9", "question10", 
+"question11", "question12", "question13", "question14", "question15", "question16", "question17", "question18", "question19", "question20"];
 //create object for messages: "correct", "wrong","out of time!","Let's see how you did"
 var messages = { correct: "CORRECT!", wrong: "WRONG!", timeOver: "OUT OF TIME!", finished: "Let's see how you did?!" };
 
@@ -134,7 +185,7 @@ function decrement() {
 function answerScreen() {
     $("#curQuestion").empty();
     $(".thisAnswer").empty();
-    $("question").empty();
+    $(".question").empty();
     var correctAnswerText = friendsQuestion[currentQuest].answerOption[friendsQuestion[currentQuest].answer];
     var correctAnswerIndex = friendsQuestion[currentQuest].answer;
     //console.log(correctAnswerText);
@@ -153,16 +204,16 @@ function answerScreen() {
         incorrectAnswer++;
         $("#gameMessage").text(messages.wrong);
         $("#correctAnswer").text("The Correct Answer Is: " + correctAnswerText + "!");
+        var img2 = $("<img>");
+        img2.attr("src", "assets/images/wrong.gif");
+        $("#gif").append(img2);
     
-
     } else {
         unanswer++;
         //console.log(unanswer);
         $("#gameMessage").text(messages.timeOver);
         $("#correctAnswer").text("The Correct Answer Is: " + correctAnswerText + "!");
         answered = true;
-
-
     }
     if (currentQuest == (friendsQuestion.length - 1)) {
         setTimeout(scoreScreen, 5000)
@@ -172,12 +223,14 @@ function answerScreen() {
     }
 }
 
-
-
-
 //create function to show scoreboard page
 
 function scoreScreen() {
+    $("#timerLeft").empty();
+    $(".question").empty();
+    $("#gameMessage").empty();
+    $("#correctAnswer").empty();
+    $("#gif").empty();
     $("#endMessage").html(messages.finished);
     $("#numCorrect").html("Correctly Answered: " + correctAnswer);
     $("#numWrong").html("Incorrectly Answered: " + incorrectAnswer);

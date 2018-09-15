@@ -1,11 +1,66 @@
 .container{
     margin-top: 50px;
-	text-align: center;
-	height: 100%;
-    width: 100%;
+    text-align: center;
     /*border: solid red 1px;*/
+    padding: 20px;
+    position: relative;
+    top: 25px;
+    background-color: whitesmoke;
 }
 
 *{
-    line-height: 40px;
+    line-height: 55px;
+}
+
+.banner{
+    height: 180px;
+}
+
+body{
+    background-image: url("../images/friendswallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+img{
+ height: 200px;
+}
+
+.thisAnswer:hover{
+    background-color: #F4C93C;
+    cursor: pointer;
+}
+
+.question, #correctAnswer{
+  color: #00B1F1;
+  font-size: 30px;
+
+}
+#endMessage, #gameMessage{
+    color: #00b1f1;
+    font-family: 'Kalam', cursive;
+    font-size: 45px;
+}
+
+
+.thisAnswer{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    
+}
+
+#curQuestion{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 20px;
+}
+
+.title{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+}
+#curQuestion{
+    color: #E4523B;
+    font-size: 30px;
 }
