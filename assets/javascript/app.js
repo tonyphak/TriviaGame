@@ -110,6 +110,8 @@ var seconds;
 var playerSelect;
 var gifArray = ["question1", "question2", "question3", "question4", "question5", "question6", "question7", "question8", "question9", "question10", 
 "question11", "question12", "question13", "question14", "question15", "question16", "question17", "question18", "question19", "question20"];
+
+
 //create object for messages: "correct", "wrong","out of time!","Let's see how you did"
 var messages = { correct: "CORRECT!", wrong: "WRONG!", timeOver: "OUT OF TIME!", finished: "Let's see how you did?!" };
 
@@ -165,11 +167,11 @@ function newTrivia() {
 }
 //create function for timer
 function timer() {
-    seconds = 10;
+    seconds = 15;
     $("#timerLeft").html('<h3>Time Remaining: ' + seconds + '</h3>');
     answered = true;
     //timer countdwon
-    time = setInterval(decrement, 1500);
+    time = setInterval(decrement, 1200);
 }
 
 function decrement() {
@@ -231,10 +233,10 @@ function scoreScreen() {
     $("#gameMessage").empty();
     $("#correctAnswer").empty();
     $("#gif").empty();
-    $("#endMessage").html(messages.finished);
-    $("#numCorrect").html("Correctly Answered: " + correctAnswer);
-    $("#numWrong").html("Incorrectly Answered: " + incorrectAnswer);
-    $("#unanswered").html("Unanswered: " + unanswer);
+    $("#endMessage").text(messages.finished);
+    $("#numCorrect").text("Correctly Answered: " + correctAnswer);
+    $("#numWrong").text("Incorrectly Answered: " + incorrectAnswer);
+    $("#unanswered").text("Unanswered: " + unanswer);
     var restart = $("<button>");
     $("#restartBtn").append(restart);
     restart.addClass("btn-primary btn-lg m-4");
