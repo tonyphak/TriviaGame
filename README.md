@@ -1,14 +1,16 @@
-# TriviaGame
+# Trivia Game
 ## Friends TV Show Trivia Game
+Trivia game based on the Friends TV Show with 20 trivia questions with a 15 second timer
 ## Motivation
+I wanted to create a trivia game for Friends fans with a list of 20 question and a 15 second timer. I wanted the trivia to reward correct answers with a funny Friends giphy. I wanted to create a difficult trivia game but at the same time have it be rewarding. 
 ## Getting Started
 The Trivia Game can be played here https://tonyphak.github.io/TriviaGame/
 ## Screenshots
-1. The question screen displays time remaining, question number out of total, the questions, and there is a border effect when hovered over the answers.
-2. The correct answer screen will show that the answer was correct with a appropriate giphy
+1. The question screen displays time remaining, question number out of total questions, the questions, and there is a highlighting effect when hovered over the answers.
+2. The correct answer screen will show that the answer was correct with the appropriate giphy
 3. The wrong answer screen will show that the answer was wrong with the appropriate giphy. This same giphy will be played for every question answered wrong.
 4. The out of time screen will show that the player is out of time with no giphy to be displayed.
-5. The scoreboard screen will show that the number of correct answered, wrong answered, and unanswered
+5. The scoreboard screen will show the number of correct answered, wrong answered, and unanswered
 ## Technologies Used
 * Google Fonts
 * Bootstrap
